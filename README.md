@@ -6,7 +6,7 @@ You scatter brilliant thoughts across a dozen apps every day. Folio brings them 
 
 !\[Folio hero](./assets/screenshot-hero.png)
 
-> Status: Active development (Phase 4 — monetization) · Built solo by \\\[@iamhammaaduddin](https://github.com/iamhammaaduddin)
+> Status: Active development (Phase 4 — Build the Folio web app (User Dashboard)) · Built solo by \\\[@iamhammaaduddin](https://github.com/iamhammaaduddin)
 
 \---
 
@@ -67,11 +67,12 @@ Input sources (WhatsApp / Voice / Email / Links)
 
 ## Roadmap
 
-* \[x] Phase 1 — Landing page \& waitlist
-* \[x] Phase 2 — MVP web app
-* \[x] Phase 3 — Mobile-first capture flow
-* \[ ] Phase 4 — Monetization (Razorpay integration) *(in progress)*
-* \[ ] Phase 5 — Multi-source contextual resurfacing at scale
+* \[x] Phase 1 — Project Foundation setup
+* \[x] Phase 2 — Built WhatsApp webhook
+* \[x] Phase 3 — Connect Twilio WhatsApp
+* \[ ] Phase 4 — Build the Folio web app (User Dashboard) *(in progress)*
+* \[ ] Phase 5 — Monetization (Razorpay integration) 
+* \[ ] Phase 6 — Multi-source contextual resurfacing at scale
 
 ## Getting started
 
