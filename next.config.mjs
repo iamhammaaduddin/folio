@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  allowedDevOrigins: ['wieldable-throttle-greyhound.ngrok-free.dev']
 };
 
 export default nextConfig;

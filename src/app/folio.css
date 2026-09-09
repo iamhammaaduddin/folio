@@ -1,0 +1,1224 @@
+/* ─── RESET & BASE ─────────────────────────────────────────────────── */
+
+.folio-landing *,
+.folio-landing *::before,
+.folio-landing *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.folio-landing {
+  --ink: #0C0C0E;
+  --paper: #F5F2EC;
+  --cream: #EDE9E0;
+  --accent: #D4522A;
+  --muted: #7A7570;
+  --border: #D8D3CA;
+  --white: #FFFFFF;
+  --fs-xs: 0.7rem;
+  --fs-sm: 0.82rem;
+  --fs-base: 0.95rem;
+  --fs-md: 1.05rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2.2rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+  --shadow-sm: 0 1px 4px rgba(12,12,14,.06);
+  --shadow-md: 0 4px 20px rgba(12,12,14,.10);
+  --shadow-lg: 0 16px 60px rgba(12,12,14,.14);
+  --shadow-xl: 0 32px 100px rgba(12,12,14,.20);
+}
+
+.folio-landing {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.folio-landing img,
+.folio-landing svg {
+  display: block;
+  max-width: 100%;
+}
+
+.folio-landing a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.folio-landing button,
+.folio-landing input {
+  font-family: inherit;
+}
+
+.folio-landing ul {
+  list-style: none;
+}
+
+.folio-landing .container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ─── UTILITIES ────────────────────────────────────────────────────── */
+
+.folio-landing .serif {
+  font-family: 'Fraunces', serif;
+}
+
+.folio-landing .italic {
+  font-style: italic;
+}
+
+.folio-landing .accent {
+  color: var(--accent);
+}
+
+.folio-landing .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.6rem;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.folio-landing .btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.folio-landing .btn-primary:hover {
+  background: #b8401f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(212,82,42,.35);
+}
+
+.folio-landing .btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+}
+
+.folio-landing .btn-secondary:hover {
+  border-color: var(--ink);
+  background: var(--cream);
+}
+
+.folio-landing .btn-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.folio-landing .btn-dark:hover {
+  background: #2a2a2e;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.folio-landing .btn-lg {
+  padding: .95rem 2.2rem;
+  font-size: var(--fs-base);
+}
+
+.folio-landing .label-eyebrow {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.folio-landing .section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+/* ─── NAVIGATION ───────────────────────────────────────────────────── */
+
+.folio-landing nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(245,242,236,.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.folio-landing .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.folio-landing .nav-logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 1.55rem;
+  letter-spacing: -.03em;
+  color: var(--ink);
+}
+
+.folio-landing .nav-logo span {
+  color: var(--accent);
+}
+
+.folio-landing .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.folio-landing .nav-links a {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--muted);
+  transition: color .18s;
+}
+
+.folio-landing .nav-links a:hover {
+  color: var(--ink);
+}
+
+.folio-landing .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.folio-landing .nav-signin {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--muted);
+  transition: color .18s;
+}
+
+.folio-landing .nav-signin:hover {
+  color: var(--ink);
+}
+
+.folio-landing .nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.folio-landing .nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: all .2s;
+}
+
+/* ─── HERO ─────────────────────────────────────────────────────────── */
+
+.folio-landing .hero {
+  padding-block: 7rem 5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.folio-landing .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 80% 30%, rgba(212,82,42,.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(74,111,165,.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.folio-landing .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.folio-landing .hero-content {
+  max-width: 520px;
+}
+
+.folio-landing .hero h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  margin-bottom: 1.4rem;
+}
+
+.folio-landing .hero-sub {
+  font-size: var(--fs-md);
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 2.2rem;
+  max-width: 430px;
+}
+
+.folio-landing .hero-actions {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.folio-landing .hero-note {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+
+/* PHONE MOCKUP */
+
+.folio-landing .hero-visual {
+  display: flex;
+  justify-content: center;
+  animation: float 5.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.folio-landing .phone {
+  width: 290px;
+  background: var(--ink);
+  border-radius: 36px;
+  padding: 1.4rem 1.1rem 1.6rem;
+  box-shadow: var(--shadow-xl), inset 0 0 0 1px rgba(255,255,255,.07);
+  position: relative;
+}
+
+.folio-landing .phone-notch {
+  width: 88px;
+  height: 6px;
+  background: #1e1e24;
+  border-radius: 99px;
+  margin: 0 auto 1.25rem;
+}
+
+.folio-landing .phone-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #4a4a5e;
+  margin-bottom: .6rem;
+  padding-inline: .2rem;
+}
+
+.folio-landing .capture-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  background: #16161c;
+  border-radius: 14px;
+  padding: .75rem .85rem;
+  margin-bottom: .6rem;
+  border: 1px solid #232330;
+  animation: slideInCard .45s ease both;
+}
+
+.folio-landing .capture-item:nth-child(1) {
+  animation-delay: .05s;
+}
+
+.folio-landing .capture-item:nth-child(2) {
+  animation-delay: .18s;
+}
+
+.folio-landing .capture-item:nth-child(3) {
+  animation-delay: .31s;
+}
+
+.folio-landing .capture-item:nth-child(4) {
+  animation-delay: .44s;
+}
+
+@keyframes slideInCard {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.folio-landing .ci-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.folio-landing .ci-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.folio-landing .ci-source {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #55546a;
+  margin-bottom: 2px;
+}
+
+.folio-landing .ci-text {
+  font-size: 11px;
+  color: #d8d6e0;
+  line-height: 1.45;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.folio-landing .ci-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 99px;
+  margin-top: 5px;
+}
+
+.folio-landing .tag-idea {
+  background: rgba(201,122,62,.18);
+  color: #d4944a;
+}
+
+.folio-landing .tag-read {
+  background: rgba(91,141,239,.16);
+  color: #7aa8f0;
+}
+
+.folio-landing .tag-buy {
+  background: rgba(62,201,122,.16);
+  color: #50c87c;
+}
+
+.folio-landing .tag-task {
+  background: rgba(168,85,247,.16);
+  color: #b880f8;
+}
+
+.folio-landing .phone-bar {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #1e1e28;
+  padding-top: .9rem;
+  margin-top: .4rem;
+}
+
+.folio-landing .pb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  color: #44445a;
+  cursor: pointer;
+}
+
+.folio-landing .pb-item span:first-child {
+  font-size: 16px;
+}
+
+/* ─── PROOF STRIP ──────────────────────────────────────────────────── */
+
+.folio-landing .proof-strip {
+  background: var(--cream);
+  border-block: 1px solid var(--border);
+  padding-block: .95rem;
+}
+
+.folio-landing .proof-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.folio-landing .avatars {
+  display: flex;
+  align-items: center;
+}
+
+.folio-landing .avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2.5px solid var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  margin-left: -9px;
+  flex-shrink: 0;
+}
+
+.folio-landing .avatars .avatar:first-child {
+  margin-left: 0;
+}
+
+.folio-landing .proof-text {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.folio-landing .proof-text strong {
+  color: var(--ink);
+}
+
+.folio-landing .proof-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+}
+
+/* ─── PROBLEM ──────────────────────────────────────────────────────── */
+
+.folio-landing .problem {
+  padding-block: 7rem;
+  text-align: center;
+}
+
+.folio-landing .problem h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  max-width: 620px;
+  margin-inline: auto;
+  margin-bottom: 1.2rem;
+}
+
+.folio-landing .problem-sub {
+  font-size: var(--fs-md);
+  color: var(--muted);
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: 2.8rem;
+  line-height: 1.75;
+}
+
+.folio-landing .scatter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.folio-landing .scatter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: .5rem 1.1rem;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  transition: all .2s;
+}
+
+.folio-landing .scatter-tag:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.folio-landing .scatter-tag strong {
+  color: var(--ink);
+}
+
+.folio-landing .problem-stat-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 2rem 3rem;
+}
+
+.folio-landing .problem-stat-n {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.folio-landing .problem-stat-l {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-top: .4rem;
+  line-height: 1.5;
+}
+
+/* ─── HOW IT WORKS ─────────────────────────────────────────────────── */
+
+.folio-landing .how {
+  padding-block: 6rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.folio-landing .how-header {
+  margin-bottom: 3.5rem;
+}
+
+.folio-landing .how-header .label-eyebrow {
+  color: #665e58;
+}
+
+.folio-landing .how h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--paper);
+  max-width: 480px;
+  margin-bottom: .6rem;
+}
+
+.folio-landing .how-sub {
+  color: #6e6a72;
+  font-size: var(--fs-md);
+  max-width: 380px;
+}
+
+.folio-landing .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.folio-landing .step-card {
+  background: #111116;
+  border: 1px solid #222230;
+  border-radius: var(--r-lg);
+  padding: 1.8rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.folio-landing .step-card:hover {
+  border-color: #3a3a50;
+  transform: translateY(-3px);
+}
+
+.folio-landing .step-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  color: #222230;
+  line-height: 1;
+  margin-bottom: .8rem;
+}
+
+.folio-landing .step-icon {
+  font-size: 1.6rem;
+  margin-bottom: .75rem;
+}
+
+.folio-landing .step-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: .5rem;
+}
+
+.folio-landing .step-card p {
+  font-size: var(--fs-sm);
+  color: #6e6a72;
+  line-height: 1.65;
+}
+
+/* ─── FEATURES ─────────────────────────────────────────────────────── */
+
+.folio-landing .features {
+  padding-block: 7rem;
+}
+
+.folio-landing .features-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.folio-landing .features h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+}
+
+.folio-landing .features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.folio-landing .feat-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.6rem;
+  transition: all .2s;
+}
+
+.folio-landing .feat-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.folio-landing .feat-icon {
+  font-size: 1.75rem;
+  margin-bottom: .9rem;
+}
+
+.folio-landing .feat-card h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.folio-landing .feat-card p {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ─── TESTIMONIALS ─────────────────────────────────────────────────── */
+
+.folio-landing .testimonials {
+  padding-block: 6.5rem;
+  background: var(--cream);
+  border-block: 1px solid var(--border);
+}
+
+.folio-landing .testi-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.folio-landing .testi-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.folio-landing .testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.folio-landing .testi-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  transition: box-shadow .2s;
+}
+
+.folio-landing .testi-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.folio-landing .testi-stars {
+  color: var(--accent);
+  font-size: .9rem;
+  letter-spacing: .08em;
+}
+
+.folio-landing .testi-quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  flex: 1;
+}
+
+.folio-landing .testi-author {
+  border-top: 1px solid var(--border);
+  padding-top: .9rem;
+}
+
+.folio-landing .testi-author strong {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.folio-landing .testi-author span {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+/* ─── PRICING ──────────────────────────────────────────────────────── */
+
+.folio-landing .pricing {
+  padding-block: 7rem;
+}
+
+.folio-landing .pricing-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.folio-landing .pricing-header h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  margin-bottom: .5rem;
+}
+
+.folio-landing .pricing-header p {
+  font-size: var(--fs-md);
+  color: var(--muted);
+}
+
+.folio-landing .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.folio-landing .price-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: relative;
+  transition: box-shadow .25s;
+}
+
+.folio-landing .price-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.folio-landing .price-card.featured {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.folio-landing .popular-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--white);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 14px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+
+.folio-landing .price-plan {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.folio-landing .price-card.featured .price-plan {
+  color: #6e6a72;
+}
+
+.folio-landing .price-amount {
+  display: flex;
+  align-items: flex-end;
+  gap: .3rem;
+  line-height: 1;
+}
+
+.folio-landing .price-currency {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-bottom: .35rem;
+  color: var(--muted);
+}
+
+.folio-landing .price-card.featured .price-currency {
+  color: #6e6a72;
+}
+
+.folio-landing .price-number {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 3.6rem;
+  letter-spacing: -.04em;
+}
+
+.folio-landing .price-period {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  padding-bottom: .4rem;
+}
+
+.folio-landing .price-card.featured .price-period {
+  color: #6e6a72;
+}
+
+.folio-landing .price-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  flex: 1;
+}
+
+.folio-landing .price-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.folio-landing .price-card.featured .price-features li {
+  color: #9998a8;
+}
+
+.folio-landing .price-features li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.folio-landing .price-card.featured .price-features li::before {
+  color: #3ec97a;
+}
+
+/* ─── FINAL CTA ────────────────────────────────────────────────────── */
+
+.folio-landing .final-cta {
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: 8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.folio-landing .final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 60% at 15% 50%, rgba(212,82,42,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 60% at 85% 50%, rgba(74,111,165,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.folio-landing .final-cta h2 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--paper);
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.folio-landing .final-cta p {
+  font-size: var(--fs-md);
+  color: #6e6a72;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+
+.folio-landing .final-cta .btn {
+  position: relative;
+}
+
+/* ─── FOOTER ───────────────────────────────────────────────────────── */
+
+.folio-landing footer {
+  background: var(--ink);
+  border-top: 1px solid #1e1e28;
+  padding-block: 1.8rem;
+}
+
+.folio-landing .footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.folio-landing .footer-logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: -.02em;
+  color: var(--paper);
+}
+
+.folio-landing .footer-logo span {
+  color: var(--accent);
+}
+
+.folio-landing .footer-copy {
+  font-size: var(--fs-xs);
+  color: #44445a;
+}
+
+.folio-landing .footer-links {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.folio-landing .footer-links a {
+  font-size: var(--fs-xs);
+  color: #44445a;
+  transition: color .18s;
+}
+
+.folio-landing .footer-links a:hover {
+  color: #9998a8;
+}
+
+/* ─── MOBILE NAV DRAWER ────────────────────────────────────────────── */
+
+.folio-landing .mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+}
+
+.folio-landing .drawer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12,12,14,.55);
+  backdrop-filter: blur(4px);
+}
+
+.folio-landing .drawer-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  background: var(--paper);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-xl);
+}
+
+.folio-landing .drawer-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.folio-landing .drawer-panel a {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.folio-landing .mobile-drawer.open {
+  display: block;
+}
+
+/* ─── RESPONSIVE ───────────────────────────────────────────────────── */
+
+@media (max-width: 960px) {
+  .folio-landing .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .folio-landing .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .folio-landing .testi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .folio-landing .container {
+    padding-inline: 1.25rem;
+  }
+
+  .folio-landing .nav-links {
+    display: none;
+  }
+
+  .folio-landing .nav-hamburger {
+    display: flex;
+  }
+
+  .folio-landing .nav-actions .btn {
+    display: none;
+  }
+
+  .folio-landing .hero {
+    padding-block: 4.5rem 3rem;
+  }
+
+  .folio-landing .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .folio-landing .hero-content {
+    max-width: 100%;
+  }
+
+  .folio-landing .hero-sub {
+    margin-inline: auto;
+  }
+
+  .folio-landing .hero-actions {
+    justify-content: center;
+  }
+
+  .folio-landing .hero-note {
+    text-align: center;
+  }
+
+  .folio-landing .hero-visual {
+    order: -1;
+  }
+
+  .folio-landing .phone {
+    width: 250px;
+  }
+
+  .folio-landing .proof-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .folio-landing .proof-divider {
+    display: none;
+  }
+
+  .folio-landing .problem {
+    padding-block: 5rem;
+  }
+
+  .folio-landing .how {
+    padding-block: 4.5rem;
+  }
+
+  .folio-landing .features {
+    padding-block: 5rem;
+  }
+
+  .folio-landing .testimonials {
+    padding-block: 4.5rem;
+  }
+
+  .folio-landing .pricing {
+    padding-block: 5rem;
+  }
+
+  .folio-landing .final-cta {
+    padding-block: 5.5rem;
+  }
+
+  .folio-landing .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-landing .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-landing .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-landing .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .folio-landing .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .folio-landing .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .folio-landing .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .folio-landing .final-cta h2 {
+    font-size: 2rem;
+  }
+}
