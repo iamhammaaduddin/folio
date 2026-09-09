@@ -1,33 +1,51 @@
-# Folio
+# Folio — Your Second Brain
 
-**An AI-native second brain** — capture ideas the moment you have them, wherever you have them, and let AI resurface them when they're actually useful.
+**Stop losing ideas you WhatsApp'd yourself.**
 
-> Status: Active development (Phase 4 — monetization) · Built solo by [@yourhandle](https://github.com/yourhandle)
+You scatter brilliant thoughts across a dozen apps every day. Folio brings them all together, organises them with AI, and resurfaces the right one exactly when you need it.
 
----
+!\[Folio hero](./assets/screenshot-hero.png)
+
+> Status: Active development (Phase 4 — monetization) · Built solo by \\\[@iamhammaaduddin](https://github.com/iamhammaaduddin)
+
+\---
 
 ## The problem
 
-Good ideas show up at the worst times — mid-conversation on WhatsApp, as a voice memo while walking, buried in an email thread, or in a link you send yourself and never open again. They get lost because capturing them is friction, and even when captured, nothing brings them back at the right moment.
+Your best ideas are already captured — you just can't find them. Every day you scatter fragments of brilliant thinking across a dozen apps. None of them talk to each other. None of them remind you. You end up rediscovering your own ideas six months too late.
 
-## What Folio does
+**73% of self-sent notes are never looked at again** — not because they weren't valuable, but because they were unfindable.
 
-Folio is a lightweight capture layer that sits across the places you already think out loud:
+!\[The problem Folio solves](./assets/screenshot-problem.png)
 
-- **Capture from anywhere** — WhatsApp messages, voice memos, email, and shared links feed into one place
-- **AI-structured, not just stored** — content is parsed and organized automatically instead of dumped into a flat notes list
-- **Contextual resurfacing** — Folio brings ideas back when they're relevant, instead of leaving them to rot in a search bar
-- **Built for actually re-reading, not just archiving**
+## How it works
+
+Three steps. One second brain. No new habits required — Folio works around how you already think.
+
+1. **Capture from anywhere** — Forward an email. Share from WhatsApp. Drop a voice memo. Paste a link. Folio ingests everything without changing a single habit.
+2. **AI organises silently** — Every item is auto-tagged by topic, intent, and urgency. Long articles get a three-line summary. Voice memos are transcribed and filed instantly.
+3. **Resurfaces at the right moment** — Starting a new project? Folio surfaces related notes you forgot you had. A daily digest shows you what's actually worth your attention today.
+
+## Features
+
+!\[Folio feature grid](./assets/screenshot-features.png)
+
+* **Universal Inbox** — One place for ideas from WhatsApp, email, voice, screenshots and links. Every source. Zero friction.
+* **AI Tagging \& Summaries** — Every note auto-tagged by topic, intent, and priority. Long articles become three-line summaries. Voice notes transcribed the moment they arrive.
+* **Natural Language Search** — Ask "what did I want to buy last month?" and Folio finds it, even if you don't remember the exact words you used.
+* **Smart Resurface** — Read-later items surface on your commute. Buy items reappear before payday.
+* **Connection Engine** — Folio spots when two notes captured months apart are related, and connects them before you realise you needed it.
+* **Private by Default** — End-to-end encrypted. Never used to train AI models. Never sold to advertisers.
 
 ## Tech stack
 
-| Layer | Choice | Why |
-|---|---|---|
-| Frontend / Framework | Next.js (App Router) | Fast iteration, server components for AI calls |
-| Database / Auth | Supabase (Mumbai region) | Low-latency for India-first user base |
-| AI — primary | Groq (Llama 3.3 70B) | Speed for real-time capture parsing |
-| AI — fallback | Google Gemini | Redundancy when primary API is unavailable |
-| Payments | Razorpay | India-market-first, replaced Stripe for local support |
+|Layer|Choice|Why|
+|-|-|-|
+|Frontend / Framework|Next.js (App Router)|Fast iteration, server components for AI calls|
+|Database / Auth|Supabase (Mumbai region)|Low-latency for India-first user base|
+|AI — primary|Groq (Llama 3.3 70B)|Speed for real-time capture parsing|
+|AI — fallback|Google Gemini|Redundancy when primary API is unavailable|
+|Payments|Razorpay|India-market-first, replaced Stripe for local support|
 
 ## Architecture (high level)
 
@@ -38,7 +56,7 @@ Input sources (WhatsApp / Voice / Email / Links)
   Capture layer (Next.js API routes)
         │
         ▼
-  AI parsing & structuring (Groq → Gemini fallback)
+  AI parsing \\\& structuring (Groq → Gemini fallback)
         │
         ▼
   Supabase (storage + auth)
@@ -49,16 +67,16 @@ Input sources (WhatsApp / Voice / Email / Links)
 
 ## Roadmap
 
-- [x] Phase 1 — Landing page & waitlist
-- [x] Phase 2 — MVP web app
-- [x] Phase 3 — Mobile-first capture flow
-- [ ] Phase 4 — Monetization (Razorpay integration) *(in progress)*
-- [ ] Phase 5 — Multi-source contextual resurfacing at scale
+* \[x] Phase 1 — Landing page \& waitlist
+* \[x] Phase 2 — MVP web app
+* \[x] Phase 3 — Mobile-first capture flow
+* \[ ] Phase 4 — Monetization (Razorpay integration) *(in progress)*
+* \[ ] Phase 5 — Multi-source contextual resurfacing at scale
 
 ## Getting started
 
 ```bash
-git clone https://github.com/yourhandle/folio.git
+git clone https://github.com/iamhammaaduddin/folio.git
 cd folio
 npm install
 cp .env.example .env.local   # add your Supabase, Groq, and Gemini keys
@@ -68,18 +86,21 @@ npm run dev
 ### Environment variables
 
 ```
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-GROQ_API_KEY=
-GEMINI_API_KEY=
-RAZORPAY_KEY_ID=
-RAZORPAY_KEY_SECRET=
+NEXT\\\_PUBLIC\\\_SUPABASE\\\_URL=
+NEXT\\\_PUBLIC\\\_SUPABASE\\\_ANON\\\_KEY=
+GROQ\\\_API\\\_KEY=
+GEMINI\\\_API\\\_KEY=
+RAZORPAY\\\_KEY\\\_ID=
+RAZORPAY\\\_KEY\\\_SECRET=
 ```
 
 ## About this project
 
-Folio started from a simple pain point: sending myself things I never came back to. It's built solo, end to end — product decisions, architecture, and implementation — and was submitted to Google Gemini's **Fund My Crazy 2026** contest (Education category), framed as a city-scale shared learning memory layer.
+Folio started from a simple pain point: sending myself things I never came back to. It's built solo, end to end — product, design, and implementation — and was submitted to Google Gemini's **Fund My Crazy 2026** contest (Education category), framed as a city-scale shared learning memory layer.
 
 ## License
 
-MIT (or update to your preference)
+All rights reserved. This code is shared publicly for portfolio and demonstration purposes only. No permission is granted to copy, modify, or redistribute without explicit consent.
+
+
+
